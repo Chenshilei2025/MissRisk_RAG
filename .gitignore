@@ -20,3 +20,7 @@ outputs/**
 .env
 .DS_Store
 *:Zone.Identifier
+
+# External reference repositories kept beside this project.
+nanobot/
+raganything/

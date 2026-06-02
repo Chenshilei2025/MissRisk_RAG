@@ -33,6 +33,13 @@ agentic_mm_rag/
     base.py
     generic.py
     schemas.py
+  controller/
+    planner.py
+    observer.py
+    answer_gate.py
+  memory/
+    cache.py
+    observation_trace.py
   observation/
     units.py
     states.py
@@ -42,8 +49,16 @@ agentic_mm_rag/
     report.py
   retrieval/
     candidates.py
+  runtime/
+    events.py
+    session.py
+    runner.py
+    trace.py
   sources/
     base.py
+  tools/
+    base.py
+    registry.py
 configs/
 docs/
 tests/
@@ -103,6 +118,31 @@ batch = adapter.convert(
 For a full repository integration, implement `ExternalRAGAdapter` and
 `UnitMapper` in `agentic_mm_rag/adapters/base.py`. If the adapter can re-open
 original files, implement `SourceStore` from `agentic_mm_rag/sources/base.py`.
+
+## Agentic Execution Shell
+
+The agentic layer is intentionally an execution shell, not the paper's central
+claim. It coordinates observation actions around the miss-risk model:
+
+```text
+question
+  -> obligations
+  -> retrieved units
+  -> observation states
+  -> miss-risk estimates
+  -> risk-reducing observation actions
+  -> answer / abstain / under-observed
+```
+
+Key modules:
+
+- `runtime/`: session budget, events, traces, and the small runner.
+- `controller/`: obligation planning, action selection, and answer gating.
+- `tools/`: typed observation tools and registry.
+- `memory/`: observation result cache and trace store.
+
+This keeps the engineering benefits of an agent runtime while preserving the
+research story: calibrated residual answer-miss risk under partial observation.
 
 ## Branches
 
