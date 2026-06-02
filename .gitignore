@@ -7,12 +7,14 @@ __pycache__/
 data_missrisk/raw/**
 !data_missrisk/raw/.gitkeep
 !data_missrisk/raw/*/.gitkeep
+!data_missrisk/raw/*/
 data_missrisk/processed/**
 !data_missrisk/processed/.gitkeep
 
 outputs/**
 !outputs/.gitkeep
 !outputs/*/.gitkeep
+!outputs/*/
 
 *.egg-info/
 .env
