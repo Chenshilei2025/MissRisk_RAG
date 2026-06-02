@@ -1,0 +1,26 @@
+dataset:
+  primary: mmdocrag
+  pilot_qa_count: 50
+  split_by: source_id
+
+observation_states:
+  - quote_text_only
+  - image_description_only
+  - page_context_only
+  - source_image_vlm
+  - full_quote
+  - masked_gold
+
+training:
+  answer_bearing_model: cross_encoder
+  missrisk_model: joint_head
+  calibration_split: calibration
+
+evaluation:
+  metrics:
+    - oracle_answer_unit_recall_at_k
+    - auroc
+    - brier_score
+    - expected_calibration_error
+    - false_unanswerable_rate
+    - observation_cost
