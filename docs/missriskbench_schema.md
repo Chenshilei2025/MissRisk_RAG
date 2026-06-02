@@ -44,3 +44,36 @@ Split by source, not by random question:
 - SlideVQA: deck id
 - MultiModalQA: source item id
 - Video datasets: video id
+
+## External Retrieval Candidate
+
+Adapters should preserve retrieval provenance when converting external RAG
+outputs:
+
+```json
+{
+  "unit": {
+    "unit_id": "doc1_page2_chart",
+    "source_id": "doc1",
+    "source_type": "document",
+    "modality": "image",
+    "locator": {"page_id": 2, "block_id": "chart"},
+    "raw_content": {"caption": "A chart showing 42."}
+  },
+  "initial_state": {
+    "unit_id": "doc1_page2_chart",
+    "state_id": "retrieved_content",
+    "observed_channels": {"caption": true},
+    "visible_content": {"caption": "A chart showing 42."}
+  },
+  "rank": 1,
+  "score": 0.91,
+  "retriever_name": "colpali",
+  "query_variant": null,
+  "retrieval_metadata": {"source_type": "document", "modality": "image"}
+}
+```
+
+The adapter layer should not decide final answerability. It only records what
+the upstream RAG system retrieved and what it already observed. MissRisk models
+then estimate residual answer-miss risk over these units and states.

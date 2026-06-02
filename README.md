@@ -29,6 +29,10 @@ scripts/
   train_missrisk.py
   eval_missrisk.py
 agentic_mm_rag/
+  adapters/
+    base.py
+    generic.py
+    schemas.py
   observation/
     units.py
     states.py
@@ -36,6 +40,10 @@ agentic_mm_rag/
     risk.py
     policy.py
     report.py
+  retrieval/
+    candidates.py
+  sources/
+    base.py
 configs/
 docs/
 tests/
@@ -57,6 +65,44 @@ pip install -e ".[dev]"
 3. Build answer-bearing pairs and joint miss-risk training examples.
 4. Evaluate calibration, hidden-answer recall, false-unanswerable reduction, and
    observation cost.
+
+## Connecting External Multimodal RAG Repositories
+
+MissRisk-RAG treats external RAG systems as producers of retrieved candidates.
+Adapters convert repository-specific retrieval outputs into three neutral
+contracts:
+
+- `ObservationUnit`: what source unit may contain answer-bearing evidence.
+- `ObservationState`: which channels the upstream system has already observed.
+- `RetrievedUnit`: rank, score, retriever name, and retrieval metadata.
+
+For simple dict-like outputs, use `GenericDictAdapter`:
+
+```python
+from agentic_mm_rag.adapters.generic import GenericDictAdapter
+from agentic_mm_rag.retrieval import RetrievalQuery
+
+adapter = GenericDictAdapter()
+batch = adapter.convert(
+    query=RetrievalQuery(question_id="q1", question="What value is shown?"),
+    raw_items=[
+        {
+            "item_id": "doc1_page2_chart",
+            "source_id": "doc1",
+            "rank": 1,
+            "score": 0.91,
+            "retriever_name": "colpali",
+            "content": {"caption": "A chart showing 42."},
+            "locator": {"page_id": 2, "block_id": "chart"},
+            "metadata": {"source_type": "document", "modality": "image"},
+        }
+    ],
+).retrieval_batch
+```
+
+For a full repository integration, implement `ExternalRAGAdapter` and
+`UnitMapper` in `agentic_mm_rag/adapters/base.py`. If the adapter can re-open
+original files, implement `SourceStore` from `agentic_mm_rag/sources/base.py`.
 
 ## Branches
 
