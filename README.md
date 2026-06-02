@@ -81,6 +81,13 @@ pip install -e ".[dev]"
 4. Evaluate calibration, hidden-answer recall, false-unanswerable reduction, and
    observation cost.
 
+## Collaboration Docs
+
+- [Contributing](CONTRIBUTING.md): branch boundaries, data policy, and PR checklist.
+- [Roadmap](docs/roadmap.md): phased tasks from pilot data to paper package.
+- [Interfaces](docs/interfaces.md): shared contracts for data, adapters, tools, runtime, and models.
+- [MissRiskBench Schema](docs/missriskbench_schema.md): JSONL schema examples.
+
 ## Connecting External Multimodal RAG Repositories
 
 MissRisk-RAG treats external RAG systems as producers of retrieved candidates.
