@@ -1,0 +1,233 @@
+{
+  "args": {
+    "bs": 16,
+    "calib": "data_missrisk/processed/model_bc_training_mix_source_clean/missrisk_dev.jsonl",
+    "dev": "data_missrisk/processed/model_bc_training_mix_source_clean/missrisk_dev.jsonl",
+    "dropout": 0.1,
+    "dry_run": false,
+    "encoder": "/root/autodl-tmp/local_hf_models/models--BAAI--bge-reranker-base/snapshots/2cfc18c9415c912f9d8155881c133215df768a70",
+    "epochs": 3,
+    "include_unit_content": false,
+    "input_profile": "full",
+    "lambda_b": 0.0,
+    "lambda_d": 0.0,
+    "lr": 2e-05,
+    "max_dev_samples": null,
+    "max_len": 384,
+    "max_train_samples": null,
+    "miss_pos_weight": null,
+    "no_copy_b_encoder": false,
+    "no_state_feats": false,
+    "out": "outputs/models/source_clean_ablation/missrisk_full_no_aux_seed13",
+    "seed": 13,
+    "test": "data_missrisk/processed/model_bc_training_mix_source_clean/missrisk_test.jsonl",
+    "train": "data_missrisk/processed/model_bc_training_mix_source_clean/missrisk_train.jsonl",
+    "warm_start_b": null,
+    "warmup_ratio": 0.06,
+    "weight_decay": 0.01
+  },
+  "best_dev_miss_auroc": 0.9422212133024735,
+  "history": [
+    {
+      "dev": {
+        "bear": {
+          "accuracy": 0.40137601306046294,
+          "auroc": 0.4337798204141629,
+          "brier": 0.2784692483268784,
+          "count": 17151,
+          "ece_equal_mass": 0.1899318805039747,
+          "ece_equal_width": 0.1999187402196288,
+          "f1": 0.4634439508753593,
+          "fn": 4036,
+          "fp": 6231,
+          "positive_count": 8470,
+          "precision": 0.4157524613220816,
+          "recall": 0.5234946871310507,
+          "specificity": 0.28222555005183736,
+          "tn": 2450,
+          "tp": 4434
+        },
+        "detect": {
+          "accuracy": 0.7863046044864227,
+          "auroc": 0.7878978600971048,
+          "brier": 0.2160905502427716,
+          "count": 8470,
+          "ece_equal_mass": 0.23054725245143937,
+          "ece_equal_width": 0.22270857672193767,
+          "f1": 0.8258945748364755,
+          "fn": 23,
+          "fp": 1787,
+          "positive_count": 4316,
+          "precision": 0.7060855263157895,
+          "recall": 0.9946709916589435,
+          "specificity": 0.5698122291766972,
+          "tn": 2367,
+          "tp": 4293
+        },
+        "miss": {
+          "accuracy": 0.8575010203486677,
+          "auroc": 0.9390928294292868,
+          "brier": 0.09680315520229371,
+          "count": 17151,
+          "ece_equal_mass": 0.06250999078740747,
+          "ece_equal_width": 0.07092584087629464,
+          "f1": 0.7543224768797749,
+          "fn": 402,
+          "fp": 2042,
+          "positive_count": 4154,
+          "precision": 0.6475664480497066,
+          "recall": 0.9032258064516129,
+          "specificity": 0.8428868200353928,
+          "tn": 10955,
+          "tp": 3752
+        },
+        "product_ablation": {
+          "auroc": 0.15337484458563064,
+          "brier": 0.20222241402828894,
+          "ece_equal_mass": 0.2798559609384531
+        }
+      },
+      "epoch": 0,
+      "train_loss": {
+        "loss": 0.4770017160672444,
+        "loss_bear": 0.7744219792750482,
+        "loss_detect": 0.7326415399225746,
+        "loss_miss": 0.4770017160672444
+      }
+    },
+    {
+      "dev": {
+        "bear": {
+          "accuracy": 0.3998017608302723,
+          "auroc": 0.3857404525917789,
+          "brier": 0.2853026310715893,
+          "count": 17151,
+          "ece_equal_mass": 0.20461068349747483,
+          "ece_equal_width": 0.21617091497805244,
+          "f1": 0.45786812723825576,
+          "fn": 4123,
+          "fp": 6171,
+          "positive_count": 8470,
+          "precision": 0.4132915002852253,
+          "recall": 0.5132231404958678,
+          "specificity": 0.28913719617555583,
+          "tn": 2510,
+          "tp": 4347
+        },
+        "detect": {
+          "accuracy": 0.7306965761511216,
+          "auroc": 0.5534646084058467,
+          "brier": 0.23877885301166893,
+          "count": 8470,
+          "ece_equal_mass": 0.343737969761167,
+          "ece_equal_width": 0.18543154714202967,
+          "f1": 0.790561013681021,
+          "fn": 11,
+          "fp": 2270,
+          "positive_count": 4316,
+          "precision": 0.6547528517110266,
+          "recall": 0.997451343836886,
+          "specificity": 0.4535387578237843,
+          "tn": 1884,
+          "tp": 4305
+        },
+        "miss": {
+          "accuracy": 0.8588420500262376,
+          "auroc": 0.9422212133024735,
+          "brier": 0.09650778301969311,
+          "count": 17151,
+          "ece_equal_mass": 0.07226452886425597,
+          "ece_equal_width": 0.07480965004718829,
+          "f1": 0.7693626750500142,
+          "fn": 116,
+          "fp": 2305,
+          "positive_count": 4154,
+          "precision": 0.6366072836197383,
+          "recall": 0.9720751083293211,
+          "specificity": 0.8226513810879433,
+          "tn": 10692,
+          "tp": 4038
+        },
+        "product_ablation": {
+          "auroc": 0.07565541679575032,
+          "brier": 0.21633752754280802,
+          "ece_equal_mass": 0.3316830458344649
+        }
+      },
+      "epoch": 1,
+      "train_loss": {
+        "loss": 0.32901778633679823,
+        "loss_bear": 0.7811677854455017,
+        "loss_detect": 0.69434536726293,
+        "loss_miss": 0.32901778633679823
+      }
+    },
+    {
+      "dev": {
+        "bear": {
+          "accuracy": 0.4090140516587954,
+          "auroc": 0.3795437579144944,
+          "brier": 0.2839197870783384,
+          "count": 17151,
+          "ece_equal_mass": 0.19832335190043118,
+          "ece_equal_width": 0.2030693716903627,
+          "f1": 0.4803650158925459,
+          "fn": 3785,
+          "fp": 6351,
+          "positive_count": 8470,
+          "precision": 0.4245197535338891,
+          "recall": 0.5531286894923259,
+          "specificity": 0.2684022578044004,
+          "tn": 2330,
+          "tp": 4685
+        },
+        "detect": {
+          "accuracy": 0.7167650531286895,
+          "auroc": 0.6849531565765302,
+          "brier": 0.23591577222985977,
+          "count": 8470,
+          "ece_equal_mass": 0.30072214086531907,
+          "ece_equal_width": 0.17977746118062296,
+          "f1": 0.7824036281179139,
+          "fn": 3,
+          "fp": 2396,
+          "positive_count": 4316,
+          "precision": 0.6428677895364436,
+          "recall": 0.9993049119555144,
+          "specificity": 0.4232065479056331,
+          "tn": 1758,
+          "tp": 4313
+        },
+        "miss": {
+          "accuracy": 0.8622237770392397,
+          "auroc": 0.9418181722540393,
+          "brier": 0.10270953720909173,
+          "count": 17151,
+          "ece_equal_mass": 0.07626728226671965,
+          "ece_equal_width": 0.08600356013073265,
+          "f1": 0.7625364284996483,
+          "fn": 360,
+          "fp": 2003,
+          "positive_count": 4154,
+          "precision": 0.6544764533379334,
+          "recall": 0.9133365430909967,
+          "specificity": 0.8458875125028853,
+          "tn": 10994,
+          "tp": 3794
+        },
+        "product_ablation": {
+          "auroc": 0.11064615889100589,
+          "brier": 0.21256748326162328,
+          "ece_equal_mass": 0.3144740890707035
+        }
+      },
+      "epoch": 2,
+      "train_loss": {
+        "loss": 0.2860867608787197,
+        "loss_bear": 0.7897606575611563,
+        "loss_detect": 0.676755473692005,
+        "loss_miss": 0.2860867608787197
+      }
+    }
+  ]
+}

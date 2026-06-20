@@ -1,7 +1,7 @@
 # Roadmap
 
 This roadmap follows the proposal in `MissRisk_RAG.md`. The project should move
-from a small pilot to a stronger AAAI-ready system without letting the agentic
+from a small pilot to a stronger KDD-ready system without letting the agentic
 runtime become the main research story.
 
 ## Phase 0: Shared Contracts
@@ -26,7 +26,8 @@ Tasks:
 - Map `gold_quotes` to `label_answer_bearing = 1`.
 - Generate hard negatives from non-gold candidate quotes.
 - Split by `doc_name`, not random question.
-- Write `units.jsonl`, `qa.jsonl`, and `answer_bearing_pairs.jsonl`.
+- Write `units.jsonl`, `qa.jsonl`, and VL `answer_bearing_pairs.jsonl` with
+  image/table/page inputs preserved instead of collapsed into caption text.
 
 Deliverable:
 
@@ -89,6 +90,8 @@ Goal: train and evaluate the three model heads.
 Tasks:
 
 - Model A: answer-bearing unit predictor.
+- Train Model A as a general VL answer-bearing scorer that can inspect source
+  pixels directly for image/table units.
 - Model B: conditional detectability model.
 - Model C: joint miss-risk estimator.
 - Add inference API that returns `MissRiskEstimate`.
@@ -97,8 +100,8 @@ Tasks:
 Deliverables:
 
 ```text
-scripts/train_answer_bearing.py
-scripts/train_missrisk.py
+scripts/baselines/answer_bearing_lexical.py
+scripts/train/model_c.py
 agentic_mm_rag/models/
 ```
 

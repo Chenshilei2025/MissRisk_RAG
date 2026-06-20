@@ -1,0 +1,236 @@
+{
+  "dev": {
+    "by_modality_state": {
+      "('image', 'caption_only')": {
+        "0": 726
+      },
+      "('image', 'full_observation')": {
+        "0": 726,
+        "1": 726
+      },
+      "('image', 'metadata_only')": {
+        "0": 726
+      },
+      "('image', 'source_image_vlm')": {
+        "0": 726,
+        "1": 726
+      },
+      "('table', 'caption_only')": {
+        "0": 635
+      },
+      "('table', 'full_observation')": {
+        "0": 635,
+        "1": 635
+      },
+      "('table', 'metadata_only')": {
+        "0": 635
+      },
+      "('table', 'source_image_vlm')": {
+        "0": 635
+      },
+      "('table', 'table_flattened')": {
+        "0": 635,
+        "1": 635
+      },
+      "('text', 'full_observation')": {
+        "0": 797,
+        "1": 797
+      },
+      "('text', 'metadata_only')": {
+        "0": 797
+      },
+      "('text', 'text_only')": {
+        "0": 797,
+        "1": 797
+      }
+    },
+    "by_state": {
+      "caption_only": {
+        "0": 1361
+      },
+      "full_observation": {
+        "0": 2158,
+        "1": 2158
+      },
+      "metadata_only": {
+        "0": 2158
+      },
+      "source_image_vlm": {
+        "0": 1361,
+        "1": 726
+      },
+      "table_flattened": {
+        "0": 635,
+        "1": 635
+      },
+      "text_only": {
+        "0": 797,
+        "1": 797
+      }
+    },
+    "positive": 4316,
+    "positive_rate": 0.33755670264351634,
+    "rows": 12786,
+    "variants": {
+      "controlled_hidden_negative": 4154,
+      "counterfactual_negative": 4316,
+      "positive_observed": 4316
+    }
+  },
+  "test": {
+    "by_modality_state": {
+      "('image', 'caption_only')": {
+        "0": 623
+      },
+      "('image', 'full_observation')": {
+        "0": 623,
+        "1": 623
+      },
+      "('image', 'metadata_only')": {
+        "0": 623
+      },
+      "('image', 'source_image_vlm')": {
+        "0": 623,
+        "1": 623
+      },
+      "('table', 'caption_only')": {
+        "0": 413
+      },
+      "('table', 'full_observation')": {
+        "0": 413,
+        "1": 413
+      },
+      "('table', 'metadata_only')": {
+        "0": 413
+      },
+      "('table', 'source_image_vlm')": {
+        "0": 413
+      },
+      "('table', 'table_flattened')": {
+        "0": 413,
+        "1": 413
+      },
+      "('text', 'full_observation')": {
+        "0": 709,
+        "1": 709
+      },
+      "('text', 'metadata_only')": {
+        "0": 709
+      },
+      "('text', 'text_only')": {
+        "0": 709,
+        "1": 709
+      }
+    },
+    "by_state": {
+      "caption_only": {
+        "0": 1036
+      },
+      "full_observation": {
+        "0": 1745,
+        "1": 1745
+      },
+      "metadata_only": {
+        "0": 1745
+      },
+      "source_image_vlm": {
+        "0": 1036,
+        "1": 623
+      },
+      "table_flattened": {
+        "0": 413,
+        "1": 413
+      },
+      "text_only": {
+        "0": 709,
+        "1": 709
+      }
+    },
+    "positive": 3490,
+    "positive_rate": 0.34303125614310986,
+    "rows": 10174,
+    "variants": {
+      "controlled_hidden_negative": 3194,
+      "counterfactual_negative": 3490,
+      "positive_observed": 3490
+    }
+  },
+  "train": {
+    "by_modality_state": {
+      "('image', 'caption_only')": {
+        "0": 5018
+      },
+      "('image', 'full_observation')": {
+        "0": 5018,
+        "1": 5018
+      },
+      "('image', 'metadata_only')": {
+        "0": 5018
+      },
+      "('image', 'source_image_vlm')": {
+        "0": 5018,
+        "1": 5018
+      },
+      "('table', 'caption_only')": {
+        "0": 3257
+      },
+      "('table', 'full_observation')": {
+        "0": 3257,
+        "1": 3257
+      },
+      "('table', 'metadata_only')": {
+        "0": 3257
+      },
+      "('table', 'source_image_vlm')": {
+        "0": 3257
+      },
+      "('table', 'table_flattened')": {
+        "0": 3257,
+        "1": 3257
+      },
+      "('text', 'full_observation')": {
+        "0": 5325,
+        "1": 5325
+      },
+      "('text', 'metadata_only')": {
+        "0": 5325
+      },
+      "('text', 'text_only')": {
+        "0": 5325,
+        "1": 5325
+      }
+    },
+    "by_state": {
+      "caption_only": {
+        "0": 8275
+      },
+      "full_observation": {
+        "0": 13600,
+        "1": 13600
+      },
+      "metadata_only": {
+        "0": 13600
+      },
+      "source_image_vlm": {
+        "0": 8275,
+        "1": 5018
+      },
+      "table_flattened": {
+        "0": 3257,
+        "1": 3257
+      },
+      "text_only": {
+        "0": 5325,
+        "1": 5325
+      }
+    },
+    "positive": 27200,
+    "positive_rate": 0.3420007041190967,
+    "rows": 79532,
+    "variants": {
+      "controlled_hidden_negative": 25132,
+      "counterfactual_negative": 27200,
+      "positive_observed": 27200
+    }
+  }
+}

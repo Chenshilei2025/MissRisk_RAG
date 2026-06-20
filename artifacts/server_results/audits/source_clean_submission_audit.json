@@ -1,0 +1,466 @@
+{
+  "detectability_shortcuts": {
+    "dev_by_modality_state": {
+      "group_count": 12,
+      "group_keys": [
+        "modality",
+        "state_id"
+      ],
+      "groups": [
+        {
+          "count": 726,
+          "entropy": 0.0,
+          "group": {
+            "modality": "image",
+            "state_id": "caption_only"
+          },
+          "labels": {
+            "0": 726
+          },
+          "positive_rate": 0.0
+        },
+        {
+          "count": 726,
+          "entropy": 0.0,
+          "group": {
+            "modality": "image",
+            "state_id": "full_observation"
+          },
+          "labels": {
+            "1": 726
+          },
+          "positive_rate": 1.0
+        },
+        {
+          "count": 726,
+          "entropy": 0.0,
+          "group": {
+            "modality": "image",
+            "state_id": "metadata_only"
+          },
+          "labels": {
+            "0": 726
+          },
+          "positive_rate": 0.0
+        },
+        {
+          "count": 726,
+          "entropy": 0.0,
+          "group": {
+            "modality": "image",
+            "state_id": "source_image_vlm"
+          },
+          "labels": {
+            "1": 726
+          },
+          "positive_rate": 1.0
+        },
+        {
+          "count": 635,
+          "entropy": 0.0,
+          "group": {
+            "modality": "table",
+            "state_id": "caption_only"
+          },
+          "labels": {
+            "0": 635
+          },
+          "positive_rate": 0.0
+        },
+        {
+          "count": 635,
+          "entropy": 0.0,
+          "group": {
+            "modality": "table",
+            "state_id": "full_observation"
+          },
+          "labels": {
+            "1": 635
+          },
+          "positive_rate": 1.0
+        },
+        {
+          "count": 635,
+          "entropy": 0.0,
+          "group": {
+            "modality": "table",
+            "state_id": "metadata_only"
+          },
+          "labels": {
+            "0": 635
+          },
+          "positive_rate": 0.0
+        },
+        {
+          "count": 635,
+          "entropy": 0.0,
+          "group": {
+            "modality": "table",
+            "state_id": "source_image_vlm"
+          },
+          "labels": {
+            "0": 635
+          },
+          "positive_rate": 0.0
+        },
+        {
+          "count": 635,
+          "entropy": 0.0,
+          "group": {
+            "modality": "table",
+            "state_id": "table_flattened"
+          },
+          "labels": {
+            "1": 635
+          },
+          "positive_rate": 1.0
+        },
+        {
+          "count": 797,
+          "entropy": 0.0,
+          "group": {
+            "modality": "text",
+            "state_id": "full_observation"
+          },
+          "labels": {
+            "1": 797
+          },
+          "positive_rate": 1.0
+        },
+        {
+          "count": 797,
+          "entropy": 0.0,
+          "group": {
+            "modality": "text",
+            "state_id": "metadata_only"
+          },
+          "labels": {
+            "0": 797
+          },
+          "positive_rate": 0.0
+        },
+        {
+          "count": 797,
+          "entropy": 0.0,
+          "group": {
+            "modality": "text",
+            "state_id": "text_only"
+          },
+          "labels": {
+            "1": 797
+          },
+          "positive_rate": 1.0
+        }
+      ],
+      "pure_group_count": 12,
+      "pure_group_fraction": 1.0
+    },
+    "dev_by_state": {
+      "group_count": 6,
+      "group_keys": [
+        "state_id"
+      ],
+      "groups": [
+        {
+          "count": 1361,
+          "entropy": 0.0,
+          "group": {
+            "state_id": "caption_only"
+          },
+          "labels": {
+            "0": 1361
+          },
+          "positive_rate": 0.0
+        },
+        {
+          "count": 2158,
+          "entropy": 0.0,
+          "group": {
+            "state_id": "full_observation"
+          },
+          "labels": {
+            "1": 2158
+          },
+          "positive_rate": 1.0
+        },
+        {
+          "count": 2158,
+          "entropy": 0.0,
+          "group": {
+            "state_id": "metadata_only"
+          },
+          "labels": {
+            "0": 2158
+          },
+          "positive_rate": 0.0
+        },
+        {
+          "count": 1361,
+          "entropy": 0.9967727312698174,
+          "group": {
+            "state_id": "source_image_vlm"
+          },
+          "labels": {
+            "0": 635,
+            "1": 726
+          },
+          "positive_rate": 0.5334313005143277
+        },
+        {
+          "count": 635,
+          "entropy": 0.0,
+          "group": {
+            "state_id": "table_flattened"
+          },
+          "labels": {
+            "1": 635
+          },
+          "positive_rate": 1.0
+        },
+        {
+          "count": 797,
+          "entropy": 0.0,
+          "group": {
+            "state_id": "text_only"
+          },
+          "labels": {
+            "1": 797
+          },
+          "positive_rate": 1.0
+        }
+      ],
+      "pure_group_count": 5,
+      "pure_group_fraction": 0.8333333333333334
+    },
+    "modality_state_rule_baseline": {
+      "fallback_positive_rate": 0.5197584651838263,
+      "group_keys": [
+        "modality",
+        "state_id"
+      ],
+      "label_key": "label_detectable",
+      "metrics": {
+        "accuracy": 1.0,
+        "auroc": 1.0,
+        "brier": 0.0,
+        "count": 8470,
+        "ece_equal_mass": 0.0,
+        "ece_equal_width": 0.0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "positive_count": 4316,
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "tn": 4154,
+        "tp": 4316
+      },
+      "missing_group_count": 0
+    },
+    "state_rule_baseline": {
+      "fallback_positive_rate": 0.5197584651838263,
+      "group_keys": [
+        "state_id"
+      ],
+      "label_key": "label_detectable",
+      "metrics": {
+        "accuracy": 0.9250295159386068,
+        "auroc": 0.9866130013926303,
+        "brier": 0.04084727115612101,
+        "count": 8470,
+        "ece_equal_mass": 0.011725735401648596,
+        "ece_equal_width": 0.011725735401648596,
+        "f1": 0.9314772849897485,
+        "fn": 0,
+        "fp": 635,
+        "positive_count": 4316,
+        "precision": 0.871743082205615,
+        "recall": 1.0,
+        "specificity": 0.8471352912855079,
+        "tn": 3519,
+        "tp": 4316
+      },
+      "missing_group_count": 0
+    }
+  },
+  "missrisk_trivial_baselines": {
+    "dev_modality_state": {
+      "fallback_positive_rate": 0.2409633933536597,
+      "group_keys": [
+        "modality",
+        "state_id"
+      ],
+      "label_key": "label_joint_miss",
+      "metrics": {
+        "accuracy": 0.7515596758206519,
+        "auroc": 0.8366436660376683,
+        "brier": 0.12267522822859056,
+        "count": 17151,
+        "ece_equal_mass": 0.004096680547779479,
+        "ece_equal_width": 0.004096680547779403,
+        "f1": 0.6609913278701567,
+        "fn": 0,
+        "fp": 4261,
+        "positive_count": 4154,
+        "precision": 0.4936423054070113,
+        "recall": 1.0,
+        "specificity": 0.6721551127183196,
+        "tn": 8736,
+        "tp": 4154
+      },
+      "missing_group_count": 0
+    },
+    "dev_state": {
+      "fallback_positive_rate": 0.2409633933536597,
+      "group_keys": [
+        "state_id"
+      ],
+      "label_key": "label_joint_miss",
+      "metrics": {
+        "accuracy": 0.7531922336889977,
+        "auroc": 0.8289812000243455,
+        "brier": 0.1323996162949626,
+        "count": 17151,
+        "ece_equal_mass": 0.008412096490867866,
+        "ece_equal_width": 0.008412096490867826,
+        "f1": 0.6244343891402714,
+        "fn": 635,
+        "fp": 3598,
+        "positive_count": 4154,
+        "precision": 0.49444990866938315,
+        "recall": 0.8471352912855079,
+        "specificity": 0.7231668846656921,
+        "tn": 9399,
+        "tp": 3519
+      },
+      "missing_group_count": 0
+    },
+    "test_modality_state": {
+      "fallback_positive_rate": 0.2409633933536597,
+      "group_keys": [
+        "modality",
+        "state_id"
+      ],
+      "label_key": "label_joint_miss",
+      "metrics": {
+        "accuracy": 0.7573763218220809,
+        "auroc": 0.8415238527219658,
+        "brier": 0.11972186113369963,
+        "count": 13523,
+        "ece_equal_mass": 0.0051521034241025325,
+        "ece_equal_width": 0.004140390714094167,
+        "f1": 0.6606681145930292,
+        "fn": 0,
+        "fp": 3281,
+        "positive_count": 3194,
+        "precision": 0.49328185328185326,
+        "recall": 1.0,
+        "specificity": 0.6823506631813341,
+        "tn": 7048,
+        "tp": 3194
+      },
+      "missing_group_count": 0
+    },
+    "test_state": {
+      "fallback_positive_rate": 0.2409633933536597,
+      "group_keys": [
+        "state_id"
+      ],
+      "label_key": "label_joint_miss",
+      "metrics": {
+        "accuracy": 0.7576721141758486,
+        "auroc": 0.8318297032029449,
+        "brier": 0.12896819232146242,
+        "count": 13523,
+        "ece_equal_mass": 0.004312242049171099,
+        "ece_equal_width": 0.004312242049171114,
+        "f1": 0.6292567032469737,
+        "fn": 413,
+        "fp": 2864,
+        "positive_count": 3194,
+        "precision": 0.4926483613817538,
+        "recall": 0.8706950532247965,
+        "specificity": 0.7227224319876077,
+        "tn": 7465,
+        "tp": 2781
+      },
+      "missing_group_count": 0
+    }
+  },
+  "source_leakage": {
+    "bc_detectability": {
+      "name": "bc_detectability",
+      "pairwise_overlap": {
+        "dev_vs_test": {
+          "overlap_count": 0,
+          "sample": []
+        },
+        "dev_vs_train": {
+          "overlap_count": 0,
+          "sample": []
+        },
+        "test_vs_train": {
+          "overlap_count": 0,
+          "sample": []
+        }
+      },
+      "source_clean": true,
+      "source_counts": {
+        "dev": 882,
+        "test": 853,
+        "train": 6961
+      }
+    },
+    "bc_missrisk": {
+      "name": "bc_missrisk",
+      "pairwise_overlap": {
+        "dev_vs_test": {
+          "overlap_count": 0,
+          "sample": []
+        },
+        "dev_vs_train": {
+          "overlap_count": 0,
+          "sample": []
+        },
+        "test_vs_train": {
+          "overlap_count": 0,
+          "sample": []
+        }
+      },
+      "source_clean": true,
+      "source_counts": {
+        "dev": 1768,
+        "test": 1748,
+        "train": 13865
+      }
+    },
+    "model_a": {
+      "name": "model_a",
+      "pairwise_overlap": {
+        "dev_vs_test": {
+          "overlap_count": 0,
+          "sample": []
+        },
+        "dev_vs_train": {
+          "overlap_count": 0,
+          "sample": []
+        },
+        "test_vs_train": {
+          "overlap_count": 0,
+          "sample": []
+        }
+      },
+      "source_clean": true,
+      "source_counts": {
+        "dev": 1768,
+        "test": 1748,
+        "train": 13865
+      }
+    }
+  },
+  "trained_metrics": {
+    "model_b": null,
+    "model_c": null
+  }
+}

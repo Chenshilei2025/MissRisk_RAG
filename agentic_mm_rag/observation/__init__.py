@@ -11,7 +11,7 @@ from agentic_mm_rag.observation.policy import (
 )
 from agentic_mm_rag.observation.risk import MissRiskEstimate, RiskFeatures, joint_miss_label
 from agentic_mm_rag.observation.states import ObservationState
-from agentic_mm_rag.observation.units import ObservationUnit
+from agentic_mm_rag.observation.units import ObservationUnit, ObservationViews, TableView, TextView, VisualView
 
 __all__ = [
     "MissRiskEstimate",
@@ -19,8 +19,12 @@ __all__ = [
     "ObservationActionSpec",
     "ObservationState",
     "ObservationUnit",
+    "ObservationViews",
     "RiskFeatures",
     "SearchObligation",
+    "TableView",
+    "TextView",
+    "VisualView",
     "greedy_risk_reduction",
     "joint_miss_label",
     "missing_channels",

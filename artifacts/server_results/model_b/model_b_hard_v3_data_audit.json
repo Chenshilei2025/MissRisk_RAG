@@ -1,0 +1,70 @@
+{
+  "dev": "data_missrisk/processed/model_b_detectability_hard_v3/detectability_dev.jsonl",
+  "dev_summary": {
+    "dataset": {
+      "mmdocrag": 6432,
+      "multimodalqa": 6354
+    },
+    "label_answer_bearing": {
+      "1": 12786
+    },
+    "label_detectable": {
+      "0": 8470,
+      "1": 4316
+    },
+    "label_joint_miss": {
+      "0": 4316,
+      "1": 8470
+    },
+    "modality": {
+      "image": 4356,
+      "table": 4445,
+      "text": 3985
+    },
+    "rows": 12786,
+    "state_id": {
+      "caption_only": 1361,
+      "full_observation": 4316,
+      "metadata_only": 2158,
+      "source_image_vlm": 2087,
+      "table_flattened": 1270,
+      "text_only": 1594
+    }
+  },
+  "include_unit_content": false,
+  "input_profile": "full",
+  "state_feat_dim": 37,
+  "train": "data_missrisk/processed/model_b_detectability_hard_v3/detectability_train.jsonl",
+  "train_summary": {
+    "dataset": {
+      "mmdocrag": 29877,
+      "multimodalqa": 49655
+    },
+    "label_answer_bearing": {
+      "1": 79532
+    },
+    "label_detectable": {
+      "0": 52332,
+      "1": 27200
+    },
+    "label_joint_miss": {
+      "0": 27200,
+      "1": 52332
+    },
+    "modality": {
+      "image": 30108,
+      "table": 22799,
+      "text": 26625
+    },
+    "rows": 79532,
+    "state_id": {
+      "caption_only": 8275,
+      "full_observation": 27200,
+      "metadata_only": 13600,
+      "source_image_vlm": 13293,
+      "table_flattened": 6514,
+      "text_only": 10650
+    }
+  },
+  "use_state_feats": true
+}

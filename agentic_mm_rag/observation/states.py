@@ -1,9 +1,10 @@
 from __future__ import annotations
 
-from enum import StrEnum
 from typing import Any
 
 from pydantic import BaseModel, Field
+
+from agentic_mm_rag._compat import StrEnum
 
 
 class ObservationChannel(StrEnum):

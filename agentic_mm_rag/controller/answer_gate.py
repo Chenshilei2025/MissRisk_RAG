@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from enum import StrEnum
-
 from pydantic import BaseModel, Field
+
+from agentic_mm_rag._compat import StrEnum
 
 
 class AnswerDecision(StrEnum):

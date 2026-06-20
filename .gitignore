@@ -22,5 +22,6 @@ outputs/**
 *:Zone.Identifier
 
 # External reference repositories kept beside this project.
+external_repos/
 nanobot/
 raganything/

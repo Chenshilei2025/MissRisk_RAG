@@ -1,0 +1,57 @@
+{
+  "dev_dataset_modality_label_counts": {
+    "mmdocrag:image:0": 371,
+    "mmdocrag:image:1": 371,
+    "mmdocrag:table:0": 371,
+    "mmdocrag:table:1": 371,
+    "mmdocrag:text:0": 369,
+    "mmdocrag:text:1": 371,
+    "multimodalqa:image:0": 522,
+    "multimodalqa:image:1": 522,
+    "multimodalqa:table:0": 88,
+    "multimodalqa:table:1": 88,
+    "multimodalqa:text:0": 800,
+    "multimodalqa:text:1": 800
+  },
+  "dev_examples": 5044,
+  "dev_label_counts": {
+    "0": 2521,
+    "1": 2523
+  },
+  "duplicate_example_id_count": 0,
+  "duplicate_example_id_preview": [],
+  "format": "vl_answer_bearing",
+  "image_roots": [
+    "data_missrisk/raw/mmdocrag",
+    "data_missrisk/raw/multimodalqa"
+  ],
+  "image_zips": [
+    "data_missrisk/raw/mmdocrag/images.zip",
+    "data_missrisk/raw/multimodalqa/final_dataset_images.zip"
+  ],
+  "missing_image_count": 0,
+  "missing_image_preview": [],
+  "requires_visual_examples": 13612,
+  "target_mismatch_count": 0,
+  "target_mismatch_preview": [],
+  "text_only_examples": 14834,
+  "train_dataset_modality_label_counts": {
+    "mmdocrag:image:0": 1271,
+    "mmdocrag:image:1": 1271,
+    "mmdocrag:table:0": 1271,
+    "mmdocrag:table:1": 1271,
+    "mmdocrag:text:0": 1269,
+    "mmdocrag:text:1": 1271,
+    "multimodalqa:image:0": 3000,
+    "multimodalqa:image:1": 3000,
+    "multimodalqa:table:0": 1889,
+    "multimodalqa:table:1": 1889,
+    "multimodalqa:text:0": 3000,
+    "multimodalqa:text:1": 3000
+  },
+  "train_examples": 23402,
+  "train_label_counts": {
+    "0": 11700,
+    "1": 11702
+  }
+}
