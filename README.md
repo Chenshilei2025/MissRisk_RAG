@@ -37,6 +37,27 @@ Large model weights were not copied locally by default. The important metrics, l
 /root/autodl-tmp/MissRisk_RAG/outputs/models/
 ```
 
+Specific trained-weight locations on the server:
+
+```text
+# Model A: Qwen2.5-VL LoRA answer-bearing scorer
+/root/autodl-tmp/MissRisk_RAG/outputs/models/answer_bearing_vl_mix_v2/
+/root/autodl-tmp/MissRisk_RAG/outputs/models/answer_bearing_vl_mix_v2/adapter_model.safetensors
+
+# Model B: repaired hard-v3 detectability model
+/root/autodl-tmp/MissRisk_RAG/outputs/models/model_b_detectability_hard_v3_seed13/
+/root/autodl-tmp/MissRisk_RAG/outputs/models/model_b_detectability_hard_v3_seed13/model_B.pt
+
+# Model C: source-clean joint miss-risk models
+/root/autodl-tmp/MissRisk_RAG/outputs/models/source_clean_ablation/missrisk_full_all_seed13/
+/root/autodl-tmp/MissRisk_RAG/outputs/models/source_clean_ablation/missrisk_full_all_seed13/model_C.pt
+/root/autodl-tmp/MissRisk_RAG/outputs/models/source_clean_ablation/missrisk_full_no_aux_seed13/
+/root/autodl-tmp/MissRisk_RAG/outputs/models/source_clean_ablation/missrisk_full_no_aux_seed13/model_C.pt
+
+# Old shortcut-prone Model B, kept only for audit/comparison
+/root/autodl-tmp/MissRisk_RAG/outputs/models/source_clean_ablation/detectability_full_seed13/model_B.pt
+```
+
 ## Data Used
 
 The experiments were not trained directly on raw MMDocRAG/MultiModalQA files. They used MissRiskBench-style processed splits with:

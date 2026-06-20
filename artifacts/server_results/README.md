@@ -8,6 +8,25 @@ It intentionally does not include large checkpoints. The server checkpoints rema
 /root/autodl-tmp/MissRisk_RAG/outputs/models/
 ```
 
+Specific server weight paths:
+
+```text
+Model A:
+/root/autodl-tmp/MissRisk_RAG/outputs/models/answer_bearing_vl_mix_v2/adapter_model.safetensors
+
+Model B hard-v3:
+/root/autodl-tmp/MissRisk_RAG/outputs/models/model_b_detectability_hard_v3_seed13/model_B.pt
+
+Model C full + auxiliary heads:
+/root/autodl-tmp/MissRisk_RAG/outputs/models/source_clean_ablation/missrisk_full_all_seed13/model_C.pt
+
+Model C no auxiliary heads:
+/root/autodl-tmp/MissRisk_RAG/outputs/models/source_clean_ablation/missrisk_full_no_aux_seed13/model_C.pt
+
+Old shortcut-prone Model B, audit only:
+/root/autodl-tmp/MissRisk_RAG/outputs/models/source_clean_ablation/detectability_full_seed13/model_B.pt
+```
+
 ## Contents
 
 - `summary.json`: compact summary of Model A/B/C results and audit findings.
@@ -23,4 +42,3 @@ It intentionally does not include large checkpoints. The server checkpoints rema
 - Old Model B source-clean detectability results are shortcut-prone and should not be used as a main claim.
 - Model B hard-v3 has strong dev metrics, but the run did not write final `metrics.json`, `test_metrics.json`, or `temperature.json`; these should be regenerated from the saved server checkpoint.
 - Model C should be retrained/evaluated after rebuilding C data with the hard-v3 detectability formulation.
-
